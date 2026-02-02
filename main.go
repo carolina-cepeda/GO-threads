@@ -6,6 +6,6 @@ import (
 )
 
 func main() {
-	result := validator.CheckHost("200.24.34.55")
-	fmt.Println("The host was found in the following blacklists:", result)
+	result := validator.CheckHost("200.24.34.55", 8)
+	fmt.Println("Blacklists:", result)
 }
