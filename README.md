@@ -12,12 +12,19 @@
 *  [Threads vs Processes]( http://cs-fundamentals.com/tech-interview/java/differences-between-thread-and-process-in-java.php)
 
 ### Descripción
-  Este ejercicio contiene una introducción a la programación con hilos en GO, además de la aplicación a un caso concreto.
+  Este ejercicio contiene una introducción a la programación con go routines (hilos), además de la aplicación a un caso concreto.
   
 
-**Parte I - Introducción a Hilos en GO**
+**Parte I - Introducción a Go routines en GO**
 
-Complete el método main para que el hilo imprima números en un intervalo dado 
+Complete el método main para que el hilo imprima números en un intervalo dado.
+
+Al hacer uso de un start mockeado para similitudes con main, se observa que se imprimen las rutinas de forma secuencial, es decir, primero se imprimen los números de un hilo y luego los de los siguientes.A su vez, se muestra que el orden de ejecución de los hilos no es determinista, ya que al correr varias veces el programa, el orden de los hilos cambia.Se observa lo siguiente: 
+![alt text](doc/img/Start.png)
+
+Por otro lado, al usar run (sin intentar hacerlo concurrente con el comando go), se observa que los números se imprimen de forma concurrente, es decir, los números de los diferentes hilos no se mezclan en la salida estándar.Como se observa a continuación:
+
+![alt text](doc/img/Run.png)
 
 **Parte II - Ejercicio Black List Search**
 
