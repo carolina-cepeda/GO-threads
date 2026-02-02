@@ -2,6 +2,7 @@ package main
 
 import (
 	"GO-THREADS/workers"
+	"sync"
 )
 
 func main() {
